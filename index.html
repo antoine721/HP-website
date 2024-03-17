@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>main</title>
+  </head>
+  <body>
+    <div class="all">
+      <header>
+        <form name="mytheme">
+          <label class="btToggle">
+              <span class="btn">
+                  <input type="checkbox" name="theme-mode" id="themeToggle">
+                  <span class="sliderr"></span>
+              </span> 
+              <span class="label">Mode</span>
+          </label>
+        </form>
+        <h1>MY OWN WEBSITE</h1>
+        <p>bienvenue sur mon site web</p>
+      </header>
+      <div class="blackbox"></div>
+      <nav>
+        <a href="">Home</a>
+        <a href="">Story</a>
+        <a href="">Collection</a>
+        <div class="burger-menu" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+      <div class="blackbox"></div>
+      <div class="content">
+        <h1>Harry Potter website</h1>
+      </div>
+      <div class="blockcenter">
+        <div class="slider-container">
+          <select id="character-dropdown">
+              <option value="">Choose a character</option>
+          </select>
+          <div class="slider" id="slider"></div>
+        </div>
+      </div>
+      
+
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Maisons de Poudlard</h4>
+            <ul>
+              <li><a href="#">Gryffondor</a></li>
+              <li><a href="#">Serdaigle</a></li>
+              <li><a href="#">Poufsouffle</a></li>
+              <li><a href="#">Serpentard</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Aide Magique</h4>
+            <ul>
+              <li><a href="#">Sortilèges</a></li>
+              <li><a href="#">Règlements de Poudlard</a></li>
+              <li><a href="#">Crédits Magiques</a></li>
+              <li><a href="#">Licence Magique</a></li>
+              <li><a href="#">Don de Sorcier</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Institutions Magiques</h4>
+            <ul>
+              <li><a href="#">Poudlard</a></li>
+              <li><a href="#">Beauxbâtons</a></li>
+              <li><a href="#">Durmstrang</a></li>
+              <li><a href="#">Ministère de la Magie</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Passions Magiques</h4>
+            <ul>
+              <li><a href="#">Quidditch</a></li>
+              <li><a href="#">Sortilèges</a></li>
+              <li><a href="#">Potions</a></li>
+              <li><a href="#">Musique Magique</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

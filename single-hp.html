@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Style for the image */
+        #character-image {
+            width: 30%; /* Set the width to 30% */
+        }
+
+        .character-info {
+            margin-left: 20px; /* Add some space between the image and character details */
+        }
+
+        /* Adjust styles as needed */
+        .character-info h2 {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img id="character-image" src="" alt="">
+            <div class="character-info">
+                <h2 id="character-name"></h2>
+                <div class="character">
+                    <h2 id="character-house"></h2>
+                    <h2 id="character-actor"></h2>
+                    <h2 id="character-patronus"></h2>
+                </div>
+                <a href="index.html">Back</a>
+            </div>
+        </div>
+    </header>
+    <script>
+        function fetchCharacter() {
+            let url = window.location.search
+            let slug = new URLSearchParams(url).get('slug')
+            return fetch('https://hp-api.lainocs.fr/characters/' + slug)
+            .then((response) => response.json())
+        }
+
+        async function displayCharacter() {
+            const data = await fetchCharacter()
+            console.log(data)
+            document.getElementById('character-image').src = data.image;
+            document.getElementById('character-name').textContent = data.name;
+            document.getElementById('character-house').textContent = data.house;
+            document.getElementById('character-actor').textContent = data.actor;
+            document.getElementById('character-patronus').textContent = 'Patronus: ' + data.patronus;
+        }
+        displayCharacter()
+    </script>
+</body>
+</html>
+
